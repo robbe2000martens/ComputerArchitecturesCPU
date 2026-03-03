@@ -132,12 +132,12 @@ if scoreboard[0] and scoreboard[1] and scoreboard[2] and scoreboard[3]:
     _score_1 = score_for_functional_pipelined_mult2
 else:
     _score_1 = 0.0
-print(f'\033[1m\tFuntional pipelined MULT2:\t{round(_score_1, 1)} pts\033[0m ({scoreboard[0]} cc, {scoreboard[1]} cc, {scoreboard[2]} cc, {scoreboard[3]} cc)\n')
+print(f'\033[1m\tFuntional pipelined MULT2:\t{round(_score_1, 2)} pts\033[0m ({scoreboard[0]} cc, {scoreboard[1]} cc, {scoreboard[2]} cc, {scoreboard[3]} cc)\n')
 if scoreboard[4]:
     _score_2 = score_for_functional_pipelined_mult3
 else:
     _score_2 = 0.0
-print(f'\033[1m\tFuntional pipelined MULT3:\t{round(_score_2, 1)} pts\033[0m ({scoreboard[4]} cc)\n')
+print(f'\033[1m\tFuntional pipelined MULT3:\t{round(_score_2, 2)} pts\033[0m ({scoreboard[4]} cc)\n')
 if scoreboard[5]:
     _score_3 = score_for_functional_pipelined_mult4
     if scoreboard[5] <= 1636:
@@ -145,7 +145,7 @@ if scoreboard[5]:
 else:
     _score_3 = 0.0
 
-print(f'\033[1m\tFuntional pipelined MULT4:\t{round(_score_3, 1)} pts\033[0m ({scoreboard[5]} cc)\n')
+print(f'\033[1m\tFuntional pipelined MULT4:\t{round(_score_3, 2)} pts\033[0m ({scoreboard[5]} cc)\n')
 print('\t'+'-'*42)
 print(f'\033[1m\tTotal Score:\t{round(_score_1+_score_2+_score_3, 1)} pts\n\033[0m')
 
