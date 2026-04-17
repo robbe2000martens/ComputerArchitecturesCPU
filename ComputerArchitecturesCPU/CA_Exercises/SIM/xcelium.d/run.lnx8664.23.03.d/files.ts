@@ -1,0 +1,14 @@
+1772452409 /users/students/r0853096/ComputerArchitectures/CA_Exercise_2026_release/CA_Exercise_2026_release/CA_Exercises/Verilog/RTL/alu.v
+1772452409 /users/students/r0853096/ComputerArchitectures/CA_Exercise_2026_release/CA_Exercise_2026_release/CA_Exercises/Verilog/RTL/alu_control.v
+1772452409 /users/students/r0853096/ComputerArchitectures/CA_Exercise_2026_release/CA_Exercise_2026_release/CA_Exercises/Verilog/RTL/branch_unit.v
+1776195354 /users/students/r0853096/ComputerArchitectures/CA_Exercise_2026_release/CA_Exercise_2026_release/CA_Exercises/Verilog/RTL/control_unit.v
+1772452409 /users/students/r0853096/ComputerArchitectures/CA_Exercise_2026_release/CA_Exercise_2026_release/CA_Exercises/Verilog/RTL/cpu.v
+1772452409 /users/students/r0853096/ComputerArchitectures/CA_Exercise_2026_release/CA_Exercise_2026_release/CA_Exercises/Verilog/RTL/immediate_extend_unit.v
+1772452409 /users/students/r0853096/ComputerArchitectures/CA_Exercise_2026_release/CA_Exercise_2026_release/CA_Exercises/Verilog/RTL/mux_2.v
+1772452409 /users/students/r0853096/ComputerArchitectures/CA_Exercise_2026_release/CA_Exercise_2026_release/CA_Exercises/Verilog/RTL/pc.v
+1772452409 /users/students/r0853096/ComputerArchitectures/CA_Exercise_2026_release/CA_Exercise_2026_release/CA_Exercises/Verilog/RTL/register_file.v
+1772452409 /users/students/r0853096/ComputerArchitectures/CA_Exercise_2026_release/CA_Exercise_2026_release/CA_Exercises/Verilog/RTL/reg_arstn.v
+1772452409 /users/students/r0853096/ComputerArchitectures/CA_Exercise_2026_release/CA_Exercise_2026_release/CA_Exercises/Verilog/RTL/reg_arstn_en.v
+1772452409 /users/students/r0853096/ComputerArchitectures/CA_Exercise_2026_release/CA_Exercise_2026_release/CA_Exercises/Verilog/RTL/sram.v
+1776192880 /users/students/r0853096/ComputerArchitectures/CA_Exercise_2026_release/CA_Exercise_2026_release/CA_Exercises/Verilog/cpu_tb.v
+1772452409 /users/students/r0853096/ComputerArchitectures/CA_Exercise_2026_release/CA_Exercise_2026_release/CA_Exercises/Verilog/sky130_sram_2rw.v

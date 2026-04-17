@@ -1,0 +1,38 @@
+xrun(64): 23.03-s002: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.03-s002: Started on Apr 17, 2026 at 20:26:12 CEST
+xrun
+	+sv
+	-64bit
+	-f files_verilog.f
+		../Verilog/RTL/alu.v
+		../Verilog/RTL/alu_control.v
+		../Verilog/RTL/branch_unit.v
+		../Verilog/RTL/control_unit.v
+		../Verilog/RTL/cpu.v
+		../Verilog/RTL/immediate_extend_unit.v
+		../Verilog/RTL/mux_2.v
+		../Verilog/RTL/pc.v
+		../Verilog/RTL/register_file.v
+		../Verilog/RTL/reg_arstn.v
+		../Verilog/RTL/reg_arstn_en.v
+		../Verilog/RTL/sram.v
+		../Verilog/cpu_tb.v
+		../Verilog/sky130_sram_2rw.v
+	-top cpu_tb
+	-timescale 1ns/10ps
+	-access +rwc
+	-allowredefinition
+Loading snapshot worklib.cpu_tb:v .................... Done
+xcelium> source /esat/micas-data/software/Cadence/xcelium_23.03/tools/xcelium/files/xmsimrc
+xcelium> run
+
+Start Execution
+
+[1;34m
+Mult1 Working Correctly
+[0m
+       2300 cycles
+Simulation complete via $finish(1) at time 248450 NS + 8
+../Verilog/cpu_tb.v:362    $finish;
+xcelium> exit
+TOOL:	xrun(64)	23.03-s002: Exiting on Apr 17, 2026 at 20:26:18 CEST  (total: 00:00:06)
