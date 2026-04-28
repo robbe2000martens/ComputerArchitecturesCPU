@@ -1,5 +1,5 @@
 xrun(64): 23.03-s002: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	23.03-s002: Started on Apr 17, 2026 at 20:26:12 CEST
+TOOL:	xrun(64)	23.03-s002: Started on Apr 28, 2026 at 21:05:19 CEST
 xrun
 	+sv
 	-64bit
@@ -22,6 +22,33 @@ xrun
 	-timescale 1ns/10ps
 	-access +rwc
 	-allowredefinition
+Recompiling... reason: unable to stat '/./users/students/r0853096/ComputerArchitectures/CA_Exercise_2026_release/CA_Exercise_2026_release/CA_Exercises/Verilog/RTL/branch_unit.v'.
+file: ../Verilog/RTL/alu_control.v
+	module worklib.alu_control:v
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		cpu_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.alu_control:v <0x483df113>
+			streams:   3, words:  1049
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 18      15
+		Registers:              110     107
+		Scalar wires:            31       -
+		Expanded wires:          32       1
+		Vectored wires:          38       -
+		Always blocks:           40      37
+		Initial blocks:           3       3
+		Cont. assignments:        3       4
+		Pseudo assignments:      29       -
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.cpu_tb:v
 Loading snapshot worklib.cpu_tb:v .................... Done
 xcelium> source /esat/micas-data/software/Cadence/xcelium_23.03/tools/xcelium/files/xmsimrc
 xcelium> run
@@ -29,10 +56,10 @@ xcelium> run
 Start Execution
 
 [1;34m
-Mult1 Working Correctly
+Mult2 Working Correctly
 [0m
-       2300 cycles
-Simulation complete via $finish(1) at time 248450 NS + 8
-../Verilog/cpu_tb.v:362    $finish;
+         40 cycles
+Simulation complete via $finish(1) at time 23850 NS + 8
+/users/students/r0853096/ComputerArchitectures/CA_Exercise_2026_release/CA_Exercise_2026_release/CA_Exercises/Verilog/cpu_tb.v:362 
 xcelium> exit
-TOOL:	xrun(64)	23.03-s002: Exiting on Apr 17, 2026 at 20:26:18 CEST  (total: 00:00:06)
+TOOL:	xrun(64)	23.03-s002: Exiting on Apr 28, 2026 at 21:05:24 CEST  (total: 00:00:05)

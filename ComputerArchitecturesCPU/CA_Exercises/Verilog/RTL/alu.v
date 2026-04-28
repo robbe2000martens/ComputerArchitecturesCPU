@@ -67,7 +67,7 @@ module alu #(
       and_out  =   alu_in_0 & alu_in_1;
       or_out   =   alu_in_0 | alu_in_1;
       slt_out  =  (alu_in_0 < alu_in_1) ? 1:0;        //Zero extend the 1 bit slt flag to a DATA_W bit value   
-      mul_out  =  (alu_in_0 * alu_in_1)[DATA_W-1:0];
+      mul_out  =  (alu_in_0 * alu_in_1);
    end
 
    //This block will translate into a multiplexer, where alu_ctrl
