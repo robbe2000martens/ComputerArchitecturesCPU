@@ -37,7 +37,7 @@ module alu #(
 
    //REG AND WIRE DECLARATION
    reg signed [DATA_W-1:0] sub_out,add_out,and_out,or_out,
-                           nor_out,slt_out, sll_out, srl_out;
+                           nor_out,slt_out, sll_out, srl_out, mul_out;
 	reg 		               overflow_add,overflow_sub,
                            msb_equal_flag;
    
