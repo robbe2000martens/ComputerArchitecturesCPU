@@ -1,5 +1,5 @@
 xrun(64): 23.03-s002: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	23.03-s002: Started on Apr 28, 2026 at 21:05:19 CEST
+TOOL:	xrun(64)	23.03-s002: Started on Apr 29, 2026 at 12:22:05 CEST
 xrun
 	+sv
 	-64bit
@@ -23,17 +23,11 @@ xrun
 	-access +rwc
 	-allowredefinition
 Recompiling... reason: unable to stat '/./users/students/r0853096/ComputerArchitectures/CA_Exercise_2026_release/CA_Exercise_2026_release/CA_Exercises/Verilog/RTL/branch_unit.v'.
-file: ../Verilog/RTL/alu_control.v
-	module worklib.alu_control:v
-		errors: 0, warnings: 0
 	Elaborating the design hierarchy:
 		Caching library 'worklib' ....... Done
 	Top level design units:
 		cpu_tb
 	Building instance overlay tables: .................... Done
-	Generating native compiled code:
-		worklib.alu_control:v <0x483df113>
-			streams:   3, words:  1049
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -62,4 +56,4 @@ Mult2 Working Correctly
 Simulation complete via $finish(1) at time 23850 NS + 8
 /users/students/r0853096/ComputerArchitectures/CA_Exercise_2026_release/CA_Exercise_2026_release/CA_Exercises/Verilog/cpu_tb.v:362 
 xcelium> exit
-TOOL:	xrun(64)	23.03-s002: Exiting on Apr 28, 2026 at 21:05:24 CEST  (total: 00:00:05)
+TOOL:	xrun(64)	23.03-s002: Exiting on Apr 29, 2026 at 12:22:10 CEST  (total: 00:00:05)
