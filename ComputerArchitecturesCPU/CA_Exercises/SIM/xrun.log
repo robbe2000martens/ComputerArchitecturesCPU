@@ -1,5 +1,5 @@
 xrun(64): 23.03-s002: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	23.03-s002: Started on Apr 30, 2026 at 13:40:51 CEST
+TOOL:	xrun(64)	23.03-s002: Started on Apr 30, 2026 at 17:01:19 CEST
 xrun
 	+sv
 	-64bit
@@ -23,8 +23,8 @@ xrun
 	-access +rwc
 	-allowredefinition
 Recompiling... reason: file '../Verilog/RTL/cpu.v' is newer than expected.
-	expected: Thu Apr 30 13:38:59 2026
-	actual:   Thu Apr 30 13:40:43 2026
+	expected: Thu Apr 30 16:48:01 2026
+	actual:   Thu Apr 30 17:00:55 2026
 file: ../Verilog/RTL/cpu.v
 	module worklib.cpu:v
 		errors: 0, warnings: 0
@@ -34,44 +34,23 @@ file: ../Verilog/RTL/cpu.v
 		cpu_tb
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.reg_arstn_en:v <0x1c5cc82f>
-			streams:   3, words:   844
-		worklib.reg_arstn_en:v <0x4edbb11f>
-			streams:   3, words:   823
-		worklib.reg_arstn_en:v <0x155f65e8>
-			streams:   3, words:   965
-		worklib.reg_arstn_en:v <0x1e7b1037>
-			streams:   3, words:   823
-		worklib.reg_arstn_en:v <0x045e0930>
-			streams:   3, words:   810
-		worklib.control_unit:v <0x43ccc4c3>
-			streams:   1, words:  8144
-		worklib.reg_arstn_en:v <0x13e4758c>
-			streams:   3, words:  1151
-		worklib.immediate_extend_unit:v <0x5e693d63>
-			streams:   2, words:  3323
-		worklib.cpu_tb:v <0x7e16c74c>
+		worklib.cpu_tb:v <0x5f09adb4>
 			streams:  28, words: 59463
-		worklib.sram_BW32:v <0x14f916b4>
-			streams:  10, words:  4764
-		worklib.register_file:v <0x7ea8fe4f>
-			streams:   5, words: 27650
-		worklib.cpu:v <0x3bc4c5b1>
-			streams:   3, words:   920
+		worklib.cpu:v <0x3e03056b>
+			streams:   2, words:   888
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                  Instances  Unique
-		Modules:                 49      15
-		Resolved nets:            0       1
-		Registers:              172     107
+		Modules:                 51      15
+		Registers:              176     107
 		Scalar wires:            47       -
 		Expanded wires:           5       1
-		Vectored wires:          61       -
-		Always blocks:          102      37
+		Vectored wires:          60       -
+		Always blocks:          106      37
 		Initial blocks:           3       3
 		Cont. assignments:        2       4
-		Pseudo assignments:      31       -
+		Pseudo assignments:      30       -
 		Simulation timescale:  10ps
 	Writing initial simulation snapshot: worklib.cpu_tb:v
 Loading snapshot worklib.cpu_tb:v .................... Done
@@ -80,9 +59,11 @@ xcelium> run
 
 Start Execution
 
-*** SIMULATION TIMED OUT ***
-     100000 cycles
-Simulation complete via $finish(1) at time 10019850 NS + 3
-/users/students/r0853096/ComputerArchitectures/CA_Exercise_2026_release/CA_Exercise_2026_release/CA_Exercises/Verilog/cpu_tb.v:362 
+[1;34m
+Mult2 Working Correctly
+[0m
+         40 cycles
+Simulation complete via $finish(1) at time 23850 NS + 8
+../Verilog/cpu_tb.v:362    $finish;
 xcelium> exit
-TOOL:	xrun(64)	23.03-s002: Exiting on Apr 30, 2026 at 13:40:57 CEST  (total: 00:00:06)
+TOOL:	xrun(64)	23.03-s002: Exiting on Apr 30, 2026 at 17:01:24 CEST  (total: 00:00:05)
