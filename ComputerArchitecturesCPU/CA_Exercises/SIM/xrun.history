@@ -23,3 +23,7 @@ s22(28Apr2026:20:36:02):  xrun +sv -64bit -f files_verilog.f -top cpu_tb -timesc
 s23(28Apr2026:20:37:41):  xrun +sv -64bit -f files_verilog.f -top cpu_tb -timescale 1ns/10ps -access +rwc -allowredefinition 
 s24(28Apr2026:21:05:19):  xrun +sv -64bit -f files_verilog.f -top cpu_tb -timescale 1ns/10ps -access +rwc -allowredefinition 
 s25(29Apr2026:12:22:05):  xrun +sv -64bit -f files_verilog.f -top cpu_tb -timescale 1ns/10ps -access +rwc -allowredefinition 
+s26(29Apr2026:13:08:12):  xrun +sv -64bit -f files_verilog.f -top cpu_tb -timescale 1ns/10ps -access +rwc -allowredefinition 
+s27(30Apr2026:13:36:40):  xrun +sv -64bit -f files_verilog.f -top cpu_tb -timescale 1ns/10ps -access +rwc -allowredefinition 
+s28(30Apr2026:13:39:06):  xrun +sv -64bit -f files_verilog.f -top cpu_tb -timescale 1ns/10ps -access +rwc -allowredefinition 
+s29(30Apr2026:13:40:52):  xrun +sv -64bit -f files_verilog.f -top cpu_tb -timescale 1ns/10ps -access +rwc -allowredefinition 
