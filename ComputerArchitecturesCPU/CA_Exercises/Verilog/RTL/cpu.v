@@ -40,7 +40,7 @@ module cpu(
 
 wire              zero_flag;
 wire              zero_flag_EX_MEM;
-wire [      63:0] branch_pc,updated_pc,current_pc, current_pc_IF_ID, current_pc_ID_EX, branch_pc_EX_MEM,jump_pc;
+wire [      63:0] branch_pc,updated_pc,current_pc, current_pc_IF_ID, current_pc_ID_EX, branch_pc_EX_MEM,jump_pc, jump_pc_EX_MEM;
 wire [      31:0] instruction, instruction_IF_ID;
 wire [       4:0] instruction11_7_ID_EX, instruction11_7_EX_MEM,
                   instruction11_7_MEM_WB;
@@ -76,7 +76,7 @@ pc #(
    .clk       (clk             ),
    .arst_n    (arst_n          ),
    .branch_pc (branch_pc_EX_MEM),
-   .jump_pc   (jump_pc), 
+   .jump_pc   (jump_pc_EX_MEM), 
    .zero_flag (zero_flag_EX_MEM),       
    .branch    (branch_EX_MEM   ),
    .jump      (jump_EX_MEM     ),
@@ -172,6 +172,16 @@ reg_arstn_en #(
 
 reg_arstn_en #(
    .DATA_W(64)
+)signal_jump_pc_EX_MEM(
+   .clk     (clk              ),
+   .arst_n  (arst_n           ),
+   .en      (enable           ),
+   .din     (jump_pc          ),
+   .dout    (jump_pc_EX_MEM   )
+);
+
+reg_arstn_en #(
+   .DATA_W(64)
 )signal_rdata_1_ID_EX(
    .clk     (clk              ),
    .arst_n  (arst_n           ),
@@ -186,7 +196,7 @@ reg_arstn_en #(
    .clk     (clk              ),
    .arst_n  (arst_n           ),
    .en      (enable           ),
-   .din     (instruction[11:7]  ),
+   .din     (instruction_IF_ID[11:7]  ),
    .dout    (instruction11_7_ID_EX)
 );
 
@@ -226,7 +236,7 @@ reg_arstn_en #(
    .clk     (clk              ),
    .arst_n  (arst_n           ),
    .en      (enable           ),
-   .din     ({instruction[30], instruction[25], instruction[14:12]}),
+   .din     ({instruction_IF_ID[30], instruction_IF_ID[25], instruction_IF_ID[14:12]}),
    .dout    (instruction30comma25comma14_12_ID_EX)
 );
 
