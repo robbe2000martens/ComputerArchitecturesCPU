@@ -44,7 +44,7 @@ wire [      63:0] branch_pc,updated_pc,current_pc, current_pc_IF_ID, current_pc_
 wire [      31:0] instruction, instruction_IF_ID;
 wire [       4:0] instruction11_7_ID_EX, instruction11_7_EX_MEM,
                   instruction11_7_MEM_WB;
-wire [       3:0] instruction30comma25comma14_12_ID_EX;
+wire [       4:0] instruction30comma25comma14_12_ID_EX;
 wire [       1:0] alu_op, alu_op_ID_EX;
 wire [       3:0] alu_control;
 wire              reg_dst,branch,mem_read,mem_2_reg,
@@ -178,16 +178,6 @@ reg_arstn_en #(
    .en      (enable           ),
    .din     (regfile_rdata_1  ),
    .dout    (regfile_rdata_1_ID_EX)
-);
-
-reg_arstn_en #(
-   .DATA_W(5)
-)signal_instruction11_7_ID_EX(
-   .clk     (clk              ),
-   .arst_n  (arst_n           ),
-   .en      (enable           ),
-   .din     (instruction[11:7]  ),
-   .dout    (instruction11_7_ID_EX)
 );
 
 reg_arstn_en #(
