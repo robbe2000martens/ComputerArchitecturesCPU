@@ -76,11 +76,11 @@ pc #(
    .clk       (clk             ),
    .arst_n    (arst_n          ),
    .branch_pc (branch_pc_EX_MEM),
-   .jump_pc   (branch_pc_EX_MEM), 
+   .jump_pc   (jump_pc), 
    .zero_flag (zero_flag_EX_MEM),       
    .branch    (branch_EX_MEM   ),
    .jump      (jump_EX_MEM     ),
-   .current_pc(current_pc_ID_EX),
+   .current_pc(current_pc),
    .enable    (enable          ),
    .updated_pc(updated_pc      )
 );
@@ -421,6 +421,16 @@ reg_arstn_en #(
 );
 
 reg_arstn_en #(
+   .DATA_W(64)
+)signal_regfile_rdata_2_ID_EX(
+   .clk     (clk              ),
+   .arst_n  (arst_n           ),
+   .en      (enable           ),
+   .din     (regfile_rdata_2 ),
+   .dout    (regfile_rdata_2_ID_EX)
+);
+
+reg_arstn_en #(
    .DATA_W(1)
 )signal_mem_2_reg_MEM_WB(
    .clk     (clk              ),
@@ -503,5 +513,3 @@ branch_unit#(
 
 
 endmodule
-
-
