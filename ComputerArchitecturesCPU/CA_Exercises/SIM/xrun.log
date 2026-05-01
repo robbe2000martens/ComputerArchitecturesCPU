@@ -1,5 +1,5 @@
 xrun(64): 23.03-s002: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	23.03-s002: Started on Apr 30, 2026 at 17:01:19 CEST
+TOOL:	xrun(64)	23.03-s002: Started on Apr 30, 2026 at 20:29:13 CEST
 xrun
 	+sv
 	-64bit
@@ -9,6 +9,7 @@ xrun
 		../Verilog/RTL/branch_unit.v
 		../Verilog/RTL/control_unit.v
 		../Verilog/RTL/cpu.v
+		../Verilog/RTL/hazard_detection_unit.v
 		../Verilog/RTL/immediate_extend_unit.v
 		../Verilog/RTL/mux_2.v
 		../Verilog/RTL/pc.v
@@ -22,11 +23,58 @@ xrun
 	-timescale 1ns/10ps
 	-access +rwc
 	-allowredefinition
-Recompiling... reason: file '../Verilog/RTL/cpu.v' is newer than expected.
-	expected: Thu Apr 30 16:48:01 2026
-	actual:   Thu Apr 30 17:00:55 2026
+file: ../Verilog/RTL/alu.v
+	module worklib.alu:v
+		errors: 0, warnings: 0
+file: ../Verilog/RTL/alu_control.v
+	module worklib.alu_control:v
+		errors: 0, warnings: 0
+file: ../Verilog/RTL/branch_unit.v
+	module worklib.branch_unit:v
+		errors: 0, warnings: 0
+file: ../Verilog/RTL/control_unit.v
+	module worklib.control_unit:v
+		errors: 0, warnings: 0
 file: ../Verilog/RTL/cpu.v
 	module worklib.cpu:v
+		errors: 0, warnings: 0
+	module worklib.forwarding_unit:v
+		errors: 0, warnings: 0
+	module worklib.mux_3:v
+		errors: 0, warnings: 0
+file: ../Verilog/RTL/hazard_detection_unit.v
+	module worklib.hazard_detection_unit:v
+		errors: 0, warnings: 0
+file: ../Verilog/RTL/immediate_extend_unit.v
+	module worklib.immediate_extend_unit:v
+		errors: 0, warnings: 0
+file: ../Verilog/RTL/mux_2.v
+	module worklib.mux_2:v
+		errors: 0, warnings: 0
+file: ../Verilog/RTL/pc.v
+	module worklib.pc:v
+		errors: 0, warnings: 0
+file: ../Verilog/RTL/register_file.v
+	module worklib.register_file:v
+		errors: 0, warnings: 0
+file: ../Verilog/RTL/reg_arstn.v
+	module worklib.reg_arstn:v
+		errors: 0, warnings: 0
+file: ../Verilog/RTL/reg_arstn_en.v
+	module worklib.reg_arstn_en:v
+		errors: 0, warnings: 0
+file: ../Verilog/RTL/sram.v
+	module worklib.sram_BW32:v
+		errors: 0, warnings: 0
+	module worklib.sram_BW64:v
+		errors: 0, warnings: 0
+file: ../Verilog/cpu_tb.v
+	module worklib.cpu_tb:v
+		errors: 0, warnings: 0
+file: ../Verilog/sky130_sram_2rw.v
+	module worklib.sky130_sram_2rw_32x128_32:v
+		errors: 0, warnings: 0
+	module worklib.sky130_sram_2rw_64x128_64:v
 		errors: 0, warnings: 0
 	Elaborating the design hierarchy:
 		Caching library 'worklib' ....... Done
@@ -34,22 +82,64 @@ file: ../Verilog/RTL/cpu.v
 		cpu_tb
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.cpu_tb:v <0x5f09adb4>
+		worklib.sky130_sram_2rw_64x128_64:v <0x18dbb7db>
+			streams:   4, words:  3138
+		worklib.alu:v <0x081ec984>
+			streams:   6, words:  5703
+		worklib.mux_3:v <0x3d991ce5>
+			streams:   1, words:   542
+		worklib.forwarding_unit:v <0x56a63aba>
+			streams:   2, words:  1178
+		worklib.alu_control:v <0x483df113>
+			streams:   3, words:  1049
+		worklib.reg_arstn_en:v <0x3e3bdf0d>
+			streams:   3, words:   844
+		worklib.reg_arstn_en:v <0x6cbca63d>
+			streams:   3, words:   823
+		worklib.reg_arstn_en:v <0x373872ca>
+			streams:   3, words:   965
+		worklib.reg_arstn_en:v <0x3c1c0715>
+			streams:   3, words:   823
+		worklib.hazard_detection_unit:v <0x5e0c3cf8>
+			streams:   1, words:   363
+		worklib.branch_unit:v <0x150d9fd2>
+			streams:   1, words:   596
+		worklib.immediate_extend_unit:v <0x7e00fce0>
+			streams:   2, words:  3323
+		worklib.control_unit:v <0x45fa51ac>
+			streams:   1, words:  8144
+		worklib.reg_arstn_en:v <0x26391e12>
+			streams:   3, words:   810
+		worklib.sky130_sram_2rw_32x128_32:v <0x550bdc69>
+			streams:   6, words:  3445
+		worklib.reg_arstn_en:v <0x318362ae>
+			streams:   3, words:  1151
+		worklib.mux_2:v <0x0cbabfa0>
+			streams:   1, words:   531
+		worklib.pc:v <0x73c69cd9>
+			streams:   5, words:  1642
+		worklib.cpu_tb:v <0x439b91e3>
 			streams:  28, words: 59463
-		worklib.cpu:v <0x3e03056b>
-			streams:   2, words:   888
+		worklib.sram_BW32:v <0x50c20e94>
+			streams:  10, words:  4764
+		worklib.sram_BW64:v <0x444609d6>
+			streams:  10, words:  4974
+		worklib.register_file:v <0x4b4f7fcf>
+			streams:   5, words: 28313
+		worklib.cpu:v <0x396b9628>
+			streams:   5, words:  2108
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                  Instances  Unique
-		Modules:                 51      15
-		Registers:              176     107
-		Scalar wires:            47       -
+		Modules:                 52      18
+		Registers:              170     107
+		Scalar wires:            58       -
 		Expanded wires:           5       1
-		Vectored wires:          60       -
-		Always blocks:          106      37
+		Vectored wires:          69       -
+		Always blocks:          100      37
 		Initial blocks:           3       3
-		Cont. assignments:        2       4
+		Cont. assignments:       10      22
 		Pseudo assignments:      30       -
 		Simulation timescale:  10ps
 	Writing initial simulation snapshot: worklib.cpu_tb:v
@@ -59,11 +149,9 @@ xcelium> run
 
 Start Execution
 
-[1;34m
-Mult2 Working Correctly
-[0m
-         40 cycles
-Simulation complete via $finish(1) at time 23850 NS + 8
-../Verilog/cpu_tb.v:362    $finish;
-xcelium> exit
-TOOL:	xrun(64)	23.03-s002: Exiting on Apr 30, 2026 at 17:01:24 CEST  (total: 00:00:05)
+Simulation interrupted at 20650 NS + 152203275
+xcelium> 
+xcelium> 
+xcelium> 
+xcelium> 
+xcelium> 

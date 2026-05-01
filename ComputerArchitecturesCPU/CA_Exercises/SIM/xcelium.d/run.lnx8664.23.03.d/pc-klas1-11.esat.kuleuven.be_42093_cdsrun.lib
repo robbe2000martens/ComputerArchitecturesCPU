@@ -1,2 +1,0 @@
-SOFTINCLUDE /esat/micas-data/software/Cadence/xcelium_23.03/tools/inca/files/cds.lib
-define worklib ../worklib

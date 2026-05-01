@@ -28,7 +28,6 @@ module cpu(
 wire [      63:0] updated_pc, current_pc, current_pc_IF_ID;
 wire [      63:0] branch_pc, jump_pc;
 wire [      31:0] instruction;
-wire [      31:0] instruction_IF_ID_raw;
 wire [      31:0] instruction_IF_ID;
 
 // Control signals from control_unit (ID stage, raw)
@@ -134,6 +133,12 @@ sram_BW32 #(
    .rdata_ext(rdata_ext  )
 );
 
+// Flush mux: when branch/jump is taken, the instruction currently being fetched
+// (which is the wrong-path instruction) must be turned into a NOP before it
+// enters the IF/ID register. Otherwise it would be executed in the next cycle.
+wire [31:0] instruction_to_IF_ID;
+assign instruction_to_IF_ID = flush_IF_ID ? 32'h00000013 : instruction;
+
 // IF/ID instruction register
 reg_arstn_en #(
    .DATA_W(32)
@@ -141,8 +146,8 @@ reg_arstn_en #(
    .clk    (clk                  ),
    .arst_n (arst_n               ),
    .en     (if_id_enable         ),
-   .din    (instruction          ),
-   .dout   (instruction_IF_ID_raw)
+   .din    (instruction_to_IF_ID ),
+   .dout   (instruction_IF_ID    )
 );
 
 // IF/ID PC register
@@ -155,9 +160,6 @@ reg_arstn_en #(
    .din    (current_pc      ),
    .dout   (current_pc_IF_ID)
 );
-
-// Flush mux: replace instruction with NOP when branch/jump taken
-assign instruction_IF_ID = flush_IF_ID ? 32'h00000013 : instruction_IF_ID_raw;
 
 // ============================================================
 // ID stage

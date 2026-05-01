@@ -3,6 +3,7 @@
 ../Verilog/RTL/branch_unit.v
 ../Verilog/RTL/control_unit.v
 ../Verilog/RTL/cpu.v
+../Verilog/RTL/hazard_detection_unit.v
 ../Verilog/RTL/immediate_extend_unit.v
 ../Verilog/RTL/mux_2.v
 ../Verilog/RTL/pc.v
